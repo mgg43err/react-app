@@ -1,15 +1,18 @@
 import './App.css';
-import Footer from './Footer';
+import Technologies from './Technologies';
 import Header from './Header';
 
-const App = () => {
+
+const  App = ()  => {
   return (
     <div className="App">
       <Header />
-      Simple html
-      <Footer />
+      <Technologies />
+
     </div>
   );
-};
+}
+
 
 export default App;
+
