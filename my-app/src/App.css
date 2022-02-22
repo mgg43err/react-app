@@ -1,30 +1,15 @@
+:root {
+	background-color: rgb(218, 190, 245);
+	font-family: "Roboto";
+}
 .app-wrapper {
-	width: 1200px;
+	width: 1440px;
+	margin: 0 auto;
 	display: grid;
-	margin: 0 50% 0 50%;
 	grid-template-areas:
 		"h h"
 		"n c";
 	grid-template-rows: 60px 1fr;
 	grid-template-columns: 2fr 10fr;
 	grid-gap: 10px;
-	align-items: center;
-}
-
-.header {
-	grid-area: h;
-	background-color: antiquewhite;
-}
-.header img {
-	width: 32px;
-}
-
-.nav {
-	grid-area: n;
-	background-color: aqua;
-}
-
-.content {
-	grid-area: c;
-	background-color: brown;
 }

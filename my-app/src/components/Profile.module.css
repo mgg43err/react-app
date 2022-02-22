@@ -1,0 +1,14 @@
+.content {
+	grid-area: c;
+	background-color: brown;
+}
+
+.content img {
+	width: 1200px;
+}
+.description img {
+	width: 45px;
+}
+.item {
+	color: aquamarine;
+}
