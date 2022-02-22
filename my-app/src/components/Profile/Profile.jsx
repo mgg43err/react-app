@@ -1,5 +1,6 @@
 import React from 'react';
 import p from './Profile.module.css';
+import MyPosts from './MyPosts/MyPosts';
 
 const Profile = () => {
   return (
@@ -15,17 +16,9 @@ const Profile = () => {
         <img
           src="https://vscode.github.com/assets/img/github-vscode-icon.svg"
           alt="gitlogo"
-          width={45}
         />
       </div>
-      <div>
-        My POSTS
-        <div>New Post</div>
-        <div className={p.posts}>
-          <div className={p.item}>Post 1</div>
-          <div className={p.item}>Post 2</div>
-        </div>
-      </div>
+      <MyPosts />
     </div>
   );
 };

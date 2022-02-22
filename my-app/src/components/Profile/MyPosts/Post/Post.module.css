@@ -1,0 +1,14 @@
+.item {
+	padding-left: 15px;
+	color: rgb(160, 160, 160);
+}
+.item img {
+	width: 45px;
+}
+.likes {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 200px;
+	padding-bottom: 15px;
+}
