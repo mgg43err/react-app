@@ -5,7 +5,7 @@ import MyPosts from './MyPosts/MyPosts';
 const Profile = () => {
   return (
     <div className={p.content}>
-      <div>
+      <div className={p.image}>
         <img
           src="https://images.hdqwalls.com/download/anime-hoods-neko-ears-4k-uh-2560x1080.jpg"
           alt="anime"

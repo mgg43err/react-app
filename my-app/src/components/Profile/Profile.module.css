@@ -4,8 +4,20 @@
 }
 
 .content img {
-	width: 1200px;
+	width: 60.25rem;
 }
 .description img {
 	width: 45px;
+}
+.image {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 2.3%;
+}
+@media (max-width: 1200px) {
+	.img {
+		width: 45.25rem;
+	}
 }
