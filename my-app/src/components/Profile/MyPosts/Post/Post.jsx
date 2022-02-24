@@ -4,14 +4,16 @@ import p from './Post.module.css';
 const Post = props => {
   return (
     <div className={p.item}>
-      <img
-        src="https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png"
-        alt="avatar"
-      />
-      <p>{props.message}</p>
+      <div className={p.itemPost}>
+        <img
+          src="https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png"
+          alt="avatar"
+        />
+        <p>{props.message}</p>
+      </div>
       <div className={p.likes}>
-        <div><span>like</span></div>
-        <div><span>dislike</span></div>
+        <div><span>likes: {props.likes}</span></div>
+        <div><span>dislikes: {props.dislikes}</span></div>
       </div>
     </div>
   );

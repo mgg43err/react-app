@@ -20,3 +20,8 @@
 		margin: 0;
 	}
 }
+
+.app-wrapper-content {
+	grid-area: c;
+	background-color: rgba(180, 185, 255, 0.616);
+}
