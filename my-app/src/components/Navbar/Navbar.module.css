@@ -1,6 +1,6 @@
 .nav {
 	grid-area: n;
-	background-color: rgba(183, 0, 255, 0.733);
+	background-color: rgb(129 140 255 / 38%);
 	padding: 38px 0px 0px 26px;
 }
 .item {
@@ -10,7 +10,7 @@
 .item a {
 	font-size: 32px;
 	text-decoration: none;
-	color: rgb(251, 221, 255);
+	color: rgb(250, 243, 251);
 }
 .active a {
 	transform: scale(1.05);

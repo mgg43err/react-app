@@ -3,27 +3,29 @@
 	font-family: "Roboto";
 }
 
-div{
-	border-radius: 27px; 
+div,
+header,
+nav {
+	border-radius: 27px;
 }
 
 .app-wrapper {
 	max-width: 1200px;
-	margin: 0 40px;
+	height: 560px;
+	margin: 0 auto;
 	display: grid;
 	grid-template-areas:
 		"h h"
 		"n c";
-	grid-template-rows: 3.75rem 1fr;
+	grid-template-rows: 3.5rem 1fr;
 	grid-template-columns: 2fr 10fr;
 	grid-gap: 0.8rem;
-	
-
+	padding-top: 0.3%;
 }
 @media (max-width: 1200px) {
 	.app-wrapper {
 		max-width: 970px;
-		margin: 0;
+		margin: 0 15px;
 	}
 }
 
