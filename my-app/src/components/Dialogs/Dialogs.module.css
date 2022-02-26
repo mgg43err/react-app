@@ -1,3 +1,10 @@
-.lol {
+.dialogs {
 	color: blue;
+}
+.dialogs_items {
+	color: rgba(26, 9, 135, 0.541);
+}
+
+.item {
+	font-size: 42px;
 }

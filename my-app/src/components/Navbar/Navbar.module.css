@@ -6,13 +6,12 @@
 .item {
 	padding-bottom: 15px;
 	padding-right: 10px;
-}
-.item a {
 	font-size: 32px;
 	text-decoration: none;
 	color: rgb(250, 243, 251);
 }
-.active a {
-	transform: scale(1.05);
-	color: rgb(39, 39, 35);
+.active {
+	font-size: 102%;
+	color: rgba(241, 93, 255, 0.664);
+	text-decoration: none;
 }
