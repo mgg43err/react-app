@@ -1,4 +1,6 @@
 .content img {
 	width: 60.25rem;
 }
-
+.content {
+	padding: 1%;
+}

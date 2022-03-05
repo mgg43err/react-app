@@ -1,7 +1,9 @@
 .header {
 	grid-area: h;
 	background-color: #38c8ff30;
-	color: aliceblue;
+	color: rgb(0 48 91);
+	text-shadow:
+    /* White glow */ 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff;
 	font-size: 50px;
 	display: flex;
 	justify-content: space-around;

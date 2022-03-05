@@ -1,41 +1,57 @@
-import React from 'react';
-import d from './Dialogs.module.css';
-import {NavLink} from 'react-router-dom';
+import React from "react";
+import d from "./Dialogs.module.css";
+import {NavLink} from "react-router-dom";
 
-const DialogItem = (props) => {
-  let path = "/dialogs/" + props.id;
-  return (
-    <div className={d.dialog + ' ' + d.active}>
-      <NavLink to={path}>{props.name}</NavLink>
-    </div>
-  );
+const DialogItem = props => {
+	let path = "/dialogs/" + props.id;
+	return (
+		<div className={d.dialog + " " + d.active}>
+			<NavLink to={path}>{props.name}</NavLink>
+		</div>
+	);
 };
 
-const Message = (props) => { 
-  return (<div className={d.message}>{props.message}</div>);
-}
+const Message = props => {
+	return <div className={d.message}>{props.message}</div>;
+}; 
 
 const Dialogs = () => {
-  return (
-    <div className={d.dialogs}>
+
+
+	let dialogs = [
+		{id: 1, name: "Bill"},
+		{id: 2, name: "Gaby"},
+		{id: 3, name: "Michael"},
+		{id: 4, name: "Noah"},
+		{id: 5, name: "Oliver"},
+		{id: 6, name: "John"},
+  ];
+
+	let messages = [
+		{id: 1, message: "Hi"},
+		{id: 2, message: "Hi, How is your IT-kamasutra?"},
+		{id: 3, message: "Yo"},
+		{id: 4, message: "Frontend"},
+		{id: 5, message: "Yes"},
+		{id: 6, message: "YESSSS"},
+  ];
+
+  let dialogsElements = dialogs
+    .map(d => <DialogItem name={d.name} id={d.id} />);
+
+  let messagesElements = messages
+    .map(m => <Message message={m.message} /> )
+
+	return (
+		<div className={d.dialogs}>
       <div className={d.dialogs_items}>
-        <DialogItem name="Bill" id="1" />
-        <DialogItem name="Gaby" id="2" />
-        <DialogItem name="Michael" id="3" />
-        <DialogItem name="Noah" id="4" />
-        <DialogItem name="Oliver" id="5" />
-        <DialogItem name="John" id="6"/>
+        {dialogsElements}
       </div>
-      <div className={d.messages}>
-        <Message message="Hi" />
-        <Message message="Hi, How is your IT-kamasutra?" />
-        <Message message="Yo" />
-        <Message message="Frontend" />
-        <Message message="Yes" />
-        <Message message="YESSSS"/>
-      </div>
-    </div>
-  );
+			<div className={d.messages}>
+        {messagesElements}
+			</div>
+		</div>
+	);
 };
 
 export default Dialogs;

@@ -1,6 +1,14 @@
-.description img {
-	width: 45px;
+.descriptionBlock img {
+	width: 65px;
+	padding: 10px;
 }
+.descriptionBlock {
+	font-size: 16px;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+	letter-spacing: 2.5px;
+	font-weight: 300;
+}
+
 .image {
 	display: flex;
 	flex-direction: column;

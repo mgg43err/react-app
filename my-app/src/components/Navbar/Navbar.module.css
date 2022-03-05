@@ -12,6 +12,7 @@
 }
 .active {
 	font-size: 102%;
-	color: rgba(241, 93, 255, 0.664);
+	color: rgb(0 22 164 / 66%);
+	text-shadow: /* White glow */ 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff;
 	text-decoration: none;
 }

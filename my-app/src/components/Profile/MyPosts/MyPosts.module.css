@@ -1,0 +1,13 @@
+.postsBlock {
+	padding: 10px;
+}
+
+.posts {
+	margin-top: 1%;
+}
+.createPost {
+	display: flex;
+	flex-direction: row;
+	width: 400px;
+	justify-content: space-between;
+}
