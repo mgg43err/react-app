@@ -8,6 +8,7 @@ const Header = () => {
         src="https://icon-library.com/images/instagram-icon-24x24/instagram-icon-24x24-21.jpg"
         alt="instagram"
       />
+      <div className={h.hname}>MADEBOOK</div>
     </header>
   );
 };

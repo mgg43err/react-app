@@ -1,24 +1,4 @@
 .content img {
 	width: 60.25rem;
 }
-.description img {
-	width: 45px;
-}
-.image {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	padding: 2.3%;
-}
-@media (max-width: 1200px) {
-	.image img {
-		width: 43.25rem;
-	}
-}
 
-@media (max-width: 700px) {
-	.image img {
-		width: 20.25rem;
-	}
-}

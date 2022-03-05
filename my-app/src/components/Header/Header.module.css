@@ -1,11 +1,28 @@
 .header {
 	grid-area: h;
 	background-color: #38c8ff30;
+	color: aliceblue;
+	font-size: 50px;
+	display: flex;
+	justify-content: space-around;
 }
 .header img {
-	padding: 3px;
+	padding: 9px;
 	width: 40px;
 	position: relative;
-	left: 2%;
-	top: 7.5%;
+}
+.hname {
+	letter-spacing: 94px;
+	font-family: ui-rounded;
+}
+@media (max-width: 1200px) {
+	.hname {
+		letter-spacing: 43px;
+	}
+}
+
+@media (max-width: 700px) {
+	.hname {
+		letter-spacing: 22px;
+	}
 }

@@ -1,10 +1,24 @@
 .dialogs {
-	color: blue;
+	display: grid;
+	grid-template-columns: 3fr 10fr;
+	/* 	display: flex;
+	justify-content: space-between;
+	; */
+	padding-top: 2%;
+	font-size: 42px;
+	padding-left: 2%;
 }
 .dialogs_items {
-	color: rgba(26, 9, 135, 0.541);
+	padding-left: 5%;
+	color: rgb(0 0 0 / 74%);
+}
+.dialogs_items > div > a {
+	text-decoration: none;
+}
+.messages {
+	color: #050026;
 }
 
-.item {
-	font-size: 42px;
+.active {
+	color: rgba(214, 59, 59, 0.74);
 }
