@@ -1,18 +1,16 @@
 .dialogs {
 	display: grid;
 	grid-template-columns: 3fr 10fr;
-	/* 	display: flex;
-	justify-content: space-between;
-	; */
 	padding-top: 2%;
 	font-size: 42px;
 	padding-left: 2%;
+	grid-gap: 20%;
 }
 .dialogs_items {
 	padding-left: 5%;
 	color: rgb(0 0 0 / 74%);
 }
-.dialogs_items > div > a {
+.dialogs_items > div > div > a {
 	text-decoration: none;
 }
 .messages {
@@ -21,4 +19,14 @@
 
 .active {
 	color: rgba(214, 59, 59, 0.74);
+}
+
+.avatar {
+	width: 37px;
+	padding-right: 15px;
+}
+
+.dialogString {
+	display: flex;
+	align-items: center;
 }
