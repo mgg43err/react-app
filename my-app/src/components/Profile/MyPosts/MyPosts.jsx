@@ -4,15 +4,8 @@ import Post from './Post/Post';
 
 const MyPosts = (props) => {
 
-  let posts = [
-    { id: 1, message: "Hi, how are you?", likes: "5", dislikes: "7" },
-    { id: 2, message: "It's my first post", likes: "9", dislikes: "2" },
-    { id: 3, message: "I hate war", likes: "9999", dislikes: "-3" },
-    { id: 4, message:"I hate putin", likes:"1billion", dislikes:"45" }
 
-  ];
-  
-  let postsData = posts
+  let postsData = props.posts
     .map(p => <Post message={p.message} likes={p.likes} dislikes={p.dislikes} />);
 
   return (
