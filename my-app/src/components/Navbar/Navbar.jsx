@@ -2,7 +2,19 @@ import React from "react";
 import {NavLink} from "react-router-dom";
 import n from "./Navbar.module.css";
 
-const Navbar = () => {
+const Navbar = props => {
+	console.log(props.state)
+	let friends = props.state.names.map(p => (
+		<div>
+			<img
+				src="https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png"
+				alt="avatar"
+			/>
+			<p>{p} </p>
+		</div>
+	
+	));
+
 	return (
 		<nav className={n.nav}>
 			<div className={n.item}>
@@ -51,27 +63,10 @@ const Navbar = () => {
 					className={navData => (navData.isActive ? n.active : n.item)}
 				>
 					Friends
+					<div className={n.fSlider}>
+						{friends}
+					</div>
 				</NavLink>
-				<div className={n.fSlider}>
-					<div>
-						<img
-							src="https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png"
-							alt="avatar"
-						/>
-					</div>
-					<div>
-						<img
-							src="https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png"
-							alt="avatar"
-						/>
-					</div>
-					<div>
-						<img
-							src="https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png"
-							alt="avatar"
-						/>
-					</div>
-				</div>
 			</div>
 		</nav>
 	);

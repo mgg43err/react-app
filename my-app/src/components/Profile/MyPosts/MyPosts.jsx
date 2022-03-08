@@ -18,7 +18,7 @@ const MyPosts = (props) => {
             <textarea></textarea>
           </div>
           <div>
-            <button>Add Post</button>
+            <button >Add Post</button>
           </div>
           <div>
             <button>Remove</button>

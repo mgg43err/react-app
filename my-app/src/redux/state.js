@@ -25,6 +25,12 @@ let state = {
 				likes: "1billion",
 				dislikes: "45",
 			},
+				{
+				id: 5,
+				message: " I love Heavy Snow",
+				likes: "77",
+				dislikes: "2",
+			},
 		],
 	},
 
@@ -54,6 +60,10 @@ let state = {
 				id: 6,
 				message: "YESSSS",
 			},
+			{
+				id: 7,
+				message: "Kristina is best girlfriend!",
+			},
 		],
 		dialogs: [
 			{
@@ -79,8 +89,15 @@ let state = {
 			{
 				id: 6,
 				name: "John",
+			},{
+				id: 7,
+				name: "Kris",
 			},
+
 		],
+	},
+	sidebar: {
+		names: ["Noah","John", "Kris"],
 	},
 };
 
