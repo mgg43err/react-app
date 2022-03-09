@@ -3,7 +3,6 @@ import {NavLink} from "react-router-dom";
 import n from "./Navbar.module.css";
 
 const Navbar = props => {
-	console.log(props.state)
 	let friends = props.state.names.map(p => (
 		<div>
 			<img

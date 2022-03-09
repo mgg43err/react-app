@@ -17,8 +17,17 @@
 	color: #050026;
 }
 
-.active {
-	color: rgba(214, 59, 59, 0.74);
+.dialogs_items > div > div > a:link {
+	color: #bebeff;
+}
+.dialogs_items > div > div > a:active {
+	color: #ff00c8;
+}
+.dialogs_items > div > div > a:visited {
+	color: #5e69ffa9;
+}
+.dialogs_items > div > div > a:focus {
+	color: #4f5bffa9;
 }
 
 .avatar {
@@ -29,4 +38,10 @@
 .dialogString {
 	display: flex;
 	align-items: center;
+}
+
+.addmessage {
+	display: flex;
+	flex-direction: row;
+	width: max-content;
 }
