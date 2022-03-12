@@ -1,3 +1,7 @@
+import dialogsReducer from "./dialogs-reducer";
+import profileReducer from "./profile-reducer";
+import sidebarReducer from './sidebar-reducer';
+
 let store = {
 	_state: {
 		profilePage: {
@@ -91,40 +95,37 @@ let store = {
 					name: "Kris",
 				},
 			],
+			newMessageBody: "",
 		},
 		sidebar: {
 			names: ["Noah", "John", "Kris"],
 		},
 	},
-	getState() {
-		return this._state
-	},
 	_callSubscriber() {
 		console.log("State changed");
 	},
-	addPost() {
-		const newPost = {
-			id: 5,
-			message: this._state.profilePage.newPostText,
-			likes: "0",
-			dislikes: "0",
-		};
-		this._state.profilePage.posts.push(newPost);
-		this._state.profilePage.newPostText = "";
-		this._callSubscriber(this._state);
-	},
-	removePost(postMessage) {
-		this._state.profilePage.posts.pop();
-		this._callSubscriber(this._state);
-	},
-	updateNewPostText(newText) {
-		this._state.profilePage.newPostText = newText;
-		this._callSubscriber(this._state);
+
+	getState() {
+		return this._state;
 	},
 	subscribe(observer) {
 		this._callSubscriber = observer;
 	},
+
+	dispatch(action) {
+
+
+		this._state.profilePage = profileReducer(this._state.profilePage, action);
+
+		this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action);
+
+		this._state.sidebar = sidebarReducer(this._state.sidebar, action);
+
+		this._callSubscriber(this._state);
+	}
+
 };
+
 
 window.store = store;
 

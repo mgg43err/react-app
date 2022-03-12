@@ -41,7 +41,11 @@
 }
 
 .addmessage {
+	padding-top: 50px;
 	display: flex;
-	flex-direction: row;
-	width: max-content;
+	align-items: center;
+}
+.addmessage > div {
+	display: flex;
+	padding-bottom: 45px;
 }
