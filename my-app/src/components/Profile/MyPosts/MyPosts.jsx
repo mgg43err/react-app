@@ -1,32 +1,31 @@
 import React from "react";
 import p from "./MyPosts.module.css";
 import Post from "./Post/Post";
-import {
-	addPostActionCreator,
-	removePostActionCreator,
-	updateNewPostTextActionCreator
-} from "../../../redux/profile-reducer";
 
 
 
 const MyPosts = props => {
+	debugger;
 	let postsData = props.posts.map(p => (
 		<Post message={p.message} likes={p.likes} dislikes={p.dislikes} />
 	));
 
 	let newPostElement = React.createRef();
 
-  let addPost = () => {
-		props.dispatch(addPostActionCreator());
+	let onAddPost = () => {
+		props.addPost();
+		//props.dispatch(addPostActionCreator());
 	};
 
-	let removePost = () => {
-		props.dispatch(removePostActionCreator());
+	let onRemovePost = () => {
+		props.removePost();
+		//props.dispatch(removePostActionCreator());
 	};
 
 	let onPostChange = () => {
-    let text = newPostElement.current.value;
-    props.dispatch(updateNewPostTextActionCreator(text));
+		let text = newPostElement.current.value;
+		props.updateNewPostText(text);
+    //props.dispatch(updateNewPostTextActionCreator(text));
 	};
 
 	return (
@@ -45,10 +44,10 @@ const MyPosts = props => {
 						/>
 					</div>
 					<div>
-						<button onClick={addPost}>Add Post</button>
+						<button onClick={onAddPost}>Add Post</button>
 					</div>
 					<div>
-						<button onClick={removePost}>Remove</button>
+						<button onClick={onRemovePost}>Remove</button>
 					</div>
 				</div>
 				<div className={p.posts}>{postsData}</div>
