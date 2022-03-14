@@ -11,7 +11,6 @@ const Navbar = props => {
 			/>
 			<p>{p} </p>
 		</div>
-	
 	));
 
 	return (
@@ -62,9 +61,7 @@ const Navbar = props => {
 					className={navData => (navData.isActive ? n.active : n.item)}
 				>
 					Friends
-					<div className={n.fSlider}>
-						{friends}
-					</div>
+					<div className={n.fSlider}>{friends}</div>
 				</NavLink>
 			</div>
 		</nav>

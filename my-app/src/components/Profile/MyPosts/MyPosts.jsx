@@ -5,7 +5,6 @@ import Post from "./Post/Post";
 
 
 const MyPosts = props => {
-	debugger;
 	let postsData = props.posts.map(p => (
 		<Post message={p.message} likes={p.likes} dislikes={p.dislikes} />
 	));
@@ -14,18 +13,15 @@ const MyPosts = props => {
 
 	let onAddPost = () => {
 		props.addPost();
-		//props.dispatch(addPostActionCreator());
 	};
 
 	let onRemovePost = () => {
 		props.removePost();
-		//props.dispatch(removePostActionCreator());
 	};
 
 	let onPostChange = () => {
 		let text = newPostElement.current.value;
 		props.updateNewPostText(text);
-    //props.dispatch(updateNewPostTextActionCreator(text));
 	};
 
 	return (
