@@ -40,7 +40,7 @@ let initialState = {
 			newPostText: "",
 }
 
-const profileReducer = (state=initialState, action) => {
+const profileReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case ADD_POST:
 			let newPost = {
@@ -49,15 +49,21 @@ const profileReducer = (state=initialState, action) => {
 				likes: "0",
 				dislikes: "0",
 			};
-			state.posts.push(newPost);
-			state.newPostText = "";
-			return state;
+			return {
+				...state,
+				posts: [...state.posts, newPost],
+				newPostText: "",
+			};
 		case UPDATE_NEW_POST_TEXT:
-			state.newPostText = action.newText;
-			return state;
-		case REMOVE_POST:
-			state.posts.pop();
-			return state;
+			return {
+				...state,
+				newPostText:action.newText,
+			}
+		case REMOVE_POST: {
+			let newState = JSON.parse(JSON.stringify(state))
+			newState.posts.pop();
+			return newState;
+		}
 		default:
 			return state;
 	}
