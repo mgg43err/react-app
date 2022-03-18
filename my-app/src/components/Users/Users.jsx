@@ -1,49 +1,27 @@
 import React from "react";
 import styles from "./users.module.css";
-
-debugger;
+import *  as axios from "axios";
+import userPhoto from '../../../src/assets/images/user.png'
 
 const Users = props => {
 	if (props.users.length === 0) {
-		props.setUsers([
+
+		axios.get('https://social-network.samuraijs.com/api/1.0/users').then(response => {
+			props.setUsers(response.data.items);
+		}
+		)
+
+		/* props.setUsers([
 			{
 				id: 1,
 				photoUrl:
-					"https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Photos.png",
+					"https://www.pngall.com/wp-content/uploads/12/userPhoto-Profile-PNG-Photos.png",
 				followed: true,
 				fullName: "Sam",
 				status: "i'm study frontend",
 				location: {city: "Minsk", country: "Belarus"},
 			},
-			{
-				id: 2,
-				photoUrl:
-					"https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Photos.png",
-				followed: false,
-				fullName: "Rick",
-				status: "Carpe Diem",
-				location: {city: "London", country: "Great britain"},
-			},
-			{
-				id: 3,
-				photoUrl:
-					"https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Photos.png",
-				followed: true,
-				fullName: "Michael",
-				status: "YOLO",
-				location: {city: "Kiev", country: "Ukraine"},
-			},
-			{
-				id: 4,
-				photoUrl:
-					"https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Photos.png",
-				followed: false,
-				fullName: "Jack",
-				status:
-					"An open mind is like a fortress with its gates unbarred and unguarded.",
-				location: {city: "New-York", country: "USA"},
-			},
-		]);
+		*/
 	}
 
 	return (
@@ -52,7 +30,7 @@ const Users = props => {
 				<div key={u.id}>
 					<span>
 						<div>
-							<img alt="avatar" src={u.photoUrl} className={styles.userPhoto} />
+							<img alt="userPhoto" src={u.photos.small === null ? userPhoto: u.photos.small} className={styles.userPhoto} />
 						</div>
 						<div>
 							{u.followed ? (
@@ -61,7 +39,7 @@ const Users = props => {
 										props.unfollow(u.id);
 									}}
 								>
-									Unfollow{" "}
+									Unfollow
 								</button>
 							) : (
 								<button
@@ -76,12 +54,12 @@ const Users = props => {
 					</span>
 					<span>
 						<span>
-							<div>{u.fullName}</div>
+							<div>{u.name}</div>
 							<div>{u.status}</div>
 						</span>
 						<span>
-							<div>{u.location.country}</div>
-							<div>{u.location.city}</div>
+							<div>{/* u.location.country */}</div>
+							<div>{/* u.location.city */}</div>
 						</span>
 					</span>
 				</div>
