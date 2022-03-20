@@ -3,21 +3,38 @@ import styles from "./users.module.css";
 import *  as axios from "axios";
 import userPhoto from '../../../src/assets/images/user.png'
 
-class Users extends React.Component {
+const Users = props => {
 
-	constructor(props) { 
-		super(props);
-			axios.get('https://social-network.samuraijs.com/api/1.0/users').then(response => {
-				this.props.setUsers(response.data.items);
-			}
-			)
+	let getUsers = () => { 
+
+			if (props.users.length === 0) {
+
+		axios.get('https://social-network.samuraijs.com/api/1.0/users').then(response => {
+			props.setUsers(response.data.items);
+		}
+		)
 	}
 
 
-	render() {
-			return (
+
+
+		/* props.setUsers([
+			{
+				id: 1,
+				photoUrl:
+					"https://www.pngall.com/wp-content/uploads/12/userPhoto-Profile-PNG-Photos.png",
+				followed: true,
+				fullName: "Sam",
+				status: "i'm study frontend",
+				location: {city: "Minsk", country: "Belarus"},
+			},
+		*/
+	}
+
+	return (
 		<div>
-			{this.props.users.map(u => (
+			<button onClick={getUsers}>Get users</button>
+			{props.users.map(u => (
 				<div key={u.id}>
 					<span>
 						<div>
@@ -27,7 +44,7 @@ class Users extends React.Component {
 							{u.followed ? (
 								<button
 									onClick={() => {
-										this.props.unfollow(u.id);
+										props.unfollow(u.id);
 									}}
 								>
 									Unfollow
@@ -35,7 +52,7 @@ class Users extends React.Component {
 							) : (
 								<button
 									onClick={() => {
-										this.props.follow(u.id);
+										props.follow(u.id);
 									}}
 								>
 									Follow
@@ -57,7 +74,6 @@ class Users extends React.Component {
 			))}
 		</div>
 	);
-		};
-}
+};
 
 export default Users;
