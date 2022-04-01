@@ -18,8 +18,8 @@ const App = props => {
 			<Navbar state={props.state.sidebar} />
 			<div className="app-wrapper-content">
 				<Routes>
+					<Route path='/profile/*' element={<ProfileContainer/>}/>
 					<Route path="/dialogs/*" element={<DialogsContainer />} />
-					<Route path="/profile/*" element={<ProfileContainer />} />
 					<Route path="/users" element={<UsersContainer/>} />
 					<Route path="/news" element={<News />} />
 					<Route path="/music" element={<Music />} />
@@ -30,5 +30,6 @@ const App = props => {
 		</div>
 	);
 };
+
 
 export default App;

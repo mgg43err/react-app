@@ -15,7 +15,7 @@ const ProfileInfo = (props) => {
 				<div>
 						<img
 						src={props.profile.photos.large}
-					alt="gitlogo"
+						alt="profile avatar"
 				/>
 				</div>
 				<div>
