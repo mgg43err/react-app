@@ -2,6 +2,7 @@ import React from "react";
 import p from "./ProfileInfo.module.css";
 
 const ProfileInfo = (props) => {
+	debugger;
 	return (
 		<div>
 			<div>
@@ -13,16 +14,18 @@ const ProfileInfo = (props) => {
 			<div className={p.descriptionBlock}>
 				<div>
 						<img
-					src="https://vscode.github.com/assets/img/github-vscode-icon.svg"
-					alt="gitlogo"
+						src={props.profile.photos.large}
+						alt="profile avatar"
 				/>
 				</div>
 				<div>
-					<h3>Andrey Pleskunou</h3>
-					<p>Date of birth: 05.05.1995</p>
-					<p>City: Minsk</p>
-					<p>Education: BSU'2021</p>
-					<p>Relationship: engaged to Windstorm </p>
+					<h3>{props.profile.fullName}</h3>
+					<p>{props.profile.lookingForAJob === true ? 'Looking for a job' : ''}</p>
+					<p>Facebook: {props.profile.contacts.facebook}</p>
+					<p>Twitter: {props.profile.contacts.twitter}</p>
+					<p>Instagram: {props.profile.contacts.instagram}</p>
+					<p>VK: {props.profile.contacts.vk}</p>
+					<p>Github: {props.profile.contacts.github}</p>
 				</div>
 			</div>
 		</div>

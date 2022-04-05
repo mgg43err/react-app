@@ -9,7 +9,7 @@ const Navbar = props => {
 				src="https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png"
 				alt="avatar"
 			/>
-			<p>{p} </p>
+			<p>{p	} </p>
 		</div>
 	));
 

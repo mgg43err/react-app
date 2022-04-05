@@ -4,7 +4,7 @@
 	color: rgb(0 48 91);
 	text-shadow:
     /* White glow */ 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff;
-	font-size: 50px;
+	font-size: 48px;
 	display: flex;
 	justify-content: space-around;
 }
@@ -14,7 +14,7 @@
 	position: relative;
 }
 .hname {
-	letter-spacing: 94px;
+	letter-spacing: 67px;
 	font-family: ui-rounded;
 }
 @media (max-width: 1200px) {
@@ -27,4 +27,13 @@
 	.hname {
 		letter-spacing: 22px;
 	}
+}
+
+.loginBlock {
+	float: right;
+	padding-right: 3%;
+}
+.loginBlock a {
+	color: rgb(78, 71, 71);
+	text-decoration: none;
 }
