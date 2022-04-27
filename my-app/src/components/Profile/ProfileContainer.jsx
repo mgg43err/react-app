@@ -5,10 +5,6 @@ import { connect } from "react-redux";
 import { setUserProfile } from "../../redux/profile-reducer";
 import { useMatch} from "react-router-dom";
 
-
-
-
-
 class ProfileContainer extends React.Component {
 	
 	componentDidMount() {

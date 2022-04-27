@@ -2,7 +2,6 @@ import React from "react";
 import p from "./ProfileInfo.module.css";
 
 const ProfileInfo = (props) => {
-	debugger;
 	return (
 		<div>
 			<div>
