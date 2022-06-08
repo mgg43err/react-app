@@ -6,6 +6,7 @@ import usersReducer from "./users-reducer"
 import authReducer from "./auth-reducer copy";
 import  thunkMiddleware from "redux-thunk"
 
+
 let reducers = combineReducers({
   profilePage: profileReducer,
   dialogsPage: dialogsReducer,
